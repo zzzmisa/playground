@@ -7,16 +7,62 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet">
   </head>
-  <body>
-    <!-- iOS で見るとzoomが効かない問題 -->
+  <body class="has-background-primary has-text-white">
+    <!-- Bulma使用時にiOSだとzoomプロパティがアイコンに効かない問題の調査 -->
+    <h1>Web font with i Tag</h1>
     <div>
-      <i class="far fa-smile"></i>...Only Bulma
+      <i class="far fa-smile"></i>...Only Bulma（-webkit-text-size-adjust: 100%;）
     </div>
     <div style="zoom: 50%;">
       <i class="far fa-smile"></i>...Bulma + style="zoom: 50%;"
     </div>
     <div style="zoom: 50%; -webkit-text-size-adjust: auto;">
       <i class="far fa-smile"></i>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: auto;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: none;">
+      <i class="far fa-smile"></i>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: none;"
+    </div>
+    <hr>
+    <h1>Web font with span Tag</h1>
+    <div>
+      <span class="far fa-smile"></span>...Only Bulma（-webkit-text-size-adjust: 100%;）
+    </div>
+    <div style="zoom: 50%;">
+      <span class="far fa-smile"></span>...Bulma + style="zoom: 50%;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: auto;">
+      <span class="far fa-smile"></span>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: auto;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: none;">
+      <span class="far fa-smile"></span>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: none;"
+    </div>
+    <hr>
+    <h1>String with i Tag</h1>
+    <div>
+      <i> i Tag </i>...Only Bulma（-webkit-text-size-adjust: 100%;）
+    </div>
+    <div style="zoom: 50%;">
+      <i> i Tag </i>...Bulma + style="zoom: 50%;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: auto;">
+      <i> i Tag </i>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: auto;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: none;">
+      <i> i Tag </i>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: none;"
+    </div>
+    <hr>
+    <h1>String with span Tag</h1>
+    <div>
+      <span> span Tag </span>...Only Bulma（-webkit-text-size-adjust: 100%;）
+    </div>
+    <div style="zoom: 50%;">
+      <span> span Tag </span>...Bulma + style="zoom: 50%;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: auto;">
+      <span> span Tag </span>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: auto;"
+    </div>
+    <div style="zoom: 50%; -webkit-text-size-adjust: none;">
+      <span> span Tag </span>...Bulma + style="zoom: 50%; -webkit-text-size-adjust: none;"
     </div>
   </body>
 </html>
